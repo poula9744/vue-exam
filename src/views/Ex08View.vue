@@ -27,7 +27,8 @@
 
     <br><br>
     <span v-bind:key="i" v-for="(ageInfo, i) in radioAges">
-        <label>{{ ageInfo.text }}</label><input type="radio" name="age" v-bind:value="ageInfo.code" v-model="aPicked">
+        <label>{{ ageInfo.text }}</label>
+        <input type="radio" name="age" v-bind:value="ageInfo.code" v-model="aPicked">
     </span>
     <p>당신의 나이는 {{ aPicked }} 입니다.</p>
 </template>
@@ -43,7 +44,11 @@ export default {
             pList: [],
             aPicked: "",
             radioAges: [
-                {text:"10대", code:"10"}, {text:"20대", code:"20"}, {text:"30대", code:"30"}, {text:"40대", code:"40"}, {text:"기타", code:"etc"}
+                {text:"10대", code:"10"}, 
+                {text:"20대", code:"20"}, 
+                {text:"30대", code:"30"}, 
+                {text:"40대", code:"40"}, 
+                {text:"기타", code:"etc"}
             ]
         };
     },
